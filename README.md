@@ -116,5 +116,5 @@ Villupuram, Tamil Nadu
 - Cloud data monitoring
 - Wearable device integration
 
-- 
+  
 <p align="center">✨ Made with dedication for safety ✨</p>
