@@ -2,101 +2,119 @@
 
 <p align="center">
 
-  🌊 Anti Drowning System with Remote Alerts
-📌 Project Overview
+  # 🌊 Anti Drowning System with Remote Alerts
 
-This project is an IoT-based Anti Drowning System designed to detect possible drowning situations and send alerts. It uses multiple sensors like water level, heart rate, and motion sensor to monitor a person’s condition in water.
+## 📌 Project Overview
+This project is an IoT-based Anti Drowning System designed to detect possible drowning situations and send alerts.
 
-If abnormal conditions are detected, the system triggers a buzzer, LED alert, and remote notification.
+It uses multiple sensors such as:
+- Water Level Sensor
+- Heart Rate Sensor
+- Motion Sensor
 
-🎯 Objective
+These sensors continuously monitor a person’s condition in water.
 
-Prevent drowning accidents
-Monitor real-time physical conditions
-Send instant alerts during danger situations
+If abnormal conditions are detected, the system triggers:
+- Buzzer alert
+- LED indication
+- Remote notification
 
+---
 
-🛠️ Components Used
+## 🎯 Objective
+- Prevent drowning accidents
+- Monitor real-time physical conditions
+- Send instant alerts during danger situations
 
-ESP32 / Microcontroller
-Water Sensor
-Heart Rate Sensor
-Motion Sensor
-Buzzer
-LED
-WiFi Module (ESP32 built-in)
+---
 
+## 🛠️ Components Used
+- ESP32 / Microcontroller
+- Water Sensor
+- Heart Rate Sensor
+- Motion Sensor
+- Buzzer
+- LED
+- WiFi Module (ESP32 built-in)
 
-⚙️ Working Principle
+---
 
-Sensors continuously read:
-Water level
-Heart rate
-Body movement
-System checks conditions:
-High water level
-No movement
-Low heart rate
+## ⚙️ Working Principle
 
-If all conditions match:
-🚨 DANGER detected
-Buzzer & LED ON
+### 🔹 Sensor Monitoring
+The system continuously reads:
+- Water level
+- Heart rate
+- Body movement
 
-Alert message sent
+### 🔹 Condition Checking
+The system checks for:
+- High water level
+- No movement
+- Low heart rate
+
+### 🔹 Alert System
+If all conditions are met:
+- 🚨 DANGER detected
+- Buzzer & LED turned ON
+- Alert message sent
+
 Otherwise:
-✅ System remains in SAFE mode
+- ✅ System remains in SAFE mode
 
+---
 
-💻 Code Explanation
+## 💻 Code Explanation
+- analogRead() → Reads sensor values
+- if condition → Detects danger
+- digitalWrite() → Controls buzzer & LED
+- WiFi.begin() → Connects to internet
 
-analogRead() → Reads sensor values
-if condition → Detects danger
-digitalWrite() → Controls buzzer & LED
-WiFi.begin() → Connects to internet
+---
 
-
-🚨 Danger Condition Logic
-
+## 🚨 Danger Condition Logic
 if (waterValue > 500 && motionValue < 100 && heartValue < 60)
 
+---
 
-📡 Features
+## 📡 Features
+- Real-time monitoring
+- Automatic alert system
+- Wireless communication using WiFi
+- Low-cost and efficient solution
 
-Real-time monitoring
-Automatic alert system
-Wireless communication using WiFi
-Low-cost and efficient solution
+---
 
-
-📂 Project Structure
-
+## 📂 Project Structure
 Anti-Drowning-System/
 │── main.ino / code.cpp
 │── README.md
 
+---
 
-👨‍🎓 Team Members
+## 👨‍🎓 Team Members
+- G. Lakshayaa
+- K. Madhusri
+- S. Nisha
 
-G. Lakshayaa
-K. Madhusri
-S. Nisha
+---
 
-
-🏫 Institution
-
-IFET College of Engineering
+## 🏫 Institution
+IFET College of Engineering  
 Villupuram, Tamil Nadu
 
+---
 
-📅 Year
-
+## 📅 Year
 2026
 
+---
 
-🚀 Future Enhancements
+## 🚀 Future Enhancements
+- Mobile app integration
+- GPS location tracking
+- Cloud data monitoring
+- Wearable device integration
 
-Mobile app integration
-GPS location tracking
-Cloud data monitoring
-Wearable device integration
+- 
 <p align="center">✨ Made with dedication for safety ✨</p>
