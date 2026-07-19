@@ -1,83 +1,102 @@
 <h1 align="center">🌊 Anti Drowning System with Remote Alerts</h1>
 
 <p align="center">
-🚨 Smart Safety System to Prevent Drowning 🚨
-</p>
 
----
+  🌊 Anti Drowning System with Remote Alerts
+📌 Project Overview
 
-## 📌 Project Overview
-This project is designed to detect dangerous situations in water and provide immediate alerts.  
-It helps in preventing drowning incidents by continuously monitoring a person’s condition.
+This project is an IoT-based Anti Drowning System designed to detect possible drowning situations and send alerts. It uses multiple sensors like water level, heart rate, and motion sensor to monitor a person’s condition in water.
 
----
+If abnormal conditions are detected, the system triggers a buzzer, LED alert, and remote notification.
 
-## 🎯 Objective
-✔️ Detect early signs of drowning  
-✔️ Provide instant alerts  
-✔️ Improve safety in water environments  
+🎯 Objective
 
----
+Prevent drowning accidents
+Monitor real-time physical conditions
+Send instant alerts during danger situations
 
-## ⚙️ How It Works
-The system uses an ESP32 microcontroller with multiple sensors:
 
-- 💧 Water Sensor → Detects water contact  
-- 🏃 Motion Sensor → Monitors movement  
-- ❤️ Heartbeat Sensor → Tracks pulse rate  
+🛠️ Components Used
 
-📊 If abnormal conditions are detected:
-- 🔔 Buzzer is activated  
-- 📡 Remote alert is triggered  
+ESP32 / Microcontroller
+Water Sensor
+Heart Rate Sensor
+Motion Sensor
+Buzzer
+LED
+WiFi Module (ESP32 built-in)
 
----
 
-## 🧰 Technologies Used
-- ESP32 Microcontroller  
-- Embedded Systems  
-- Sensors (Water, Motion, Heartbeat)  
+⚙️ Working Principle
 
----
+Sensors continuously read:
+Water level
+Heart rate
+Body movement
+System checks conditions:
+High water level
+No movement
+Low heart rate
 
-## ✨ Features
-✔️ Real-time monitoring  
-✔️ Early detection system  
-✔️ Instant alert mechanism  
-✔️ Portable and cost-effective  
+If all conditions match:
+🚨 DANGER detected
+Buzzer & LED ON
 
----
+Alert message sent
+Otherwise:
+✅ System remains in SAFE mode
 
-## 📊 Applications
-- 🏊 Swimming Pools  
-- 🌊 Water Parks  
-- 👶 Child Safety  
-- 🛟 Personal Safety Devices  
 
----
+💻 Code Explanation
 
-## 🚀 Future Enhancements
-- 📱 Mobile App Integration  
-- 📍 GPS Tracking  
-- ☁️ IoT Cloud Alerts  
-- 💧 Waterproof Wearable Design  
+analogRead() → Reads sensor values
+if condition → Detects danger
+digitalWrite() → Controls buzzer & LED
+WiFi.begin() → Connects to internet
 
----
 
-## 📄 Project Report
-📥 Detailed report available in this repository  
+🚨 Danger Condition Logic
 
----
+if (waterValue > 500 && motionValue < 100 && heartValue < 60)
 
-## 👨‍💻 Team Members
-- Lakshayaa G  
-- Madhusri K  
-- Nisha S  
 
----
+📡 Features
 
-## 📅 Year
+Real-time monitoring
+Automatic alert system
+Wireless communication using WiFi
+Low-cost and efficient solution
+
+
+📂 Project Structure
+
+Anti-Drowning-System/
+│── main.ino / code.cpp
+│── README.md
+
+
+👨‍🎓 Team Members
+
+G. Lakshayaa
+K. Madhusri
+S. Nisha
+
+
+🏫 Institution
+
+IFET College of Engineering
+Villupuram, Tamil Nadu
+
+
+📅 Year
+
 2026
 
----
 
+🚀 Future Enhancements
+
+Mobile app integration
+GPS location tracking
+Cloud data monitoring
+Wearable device integration
 <p align="center">✨ Made with dedication for safety ✨</p>
